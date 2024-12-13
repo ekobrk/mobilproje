@@ -1,3 +1,4 @@
 # mobilproje
 
-app j.js oluşturuldu 
+app .js oluşturuldu 
+app.js geliştirildi
