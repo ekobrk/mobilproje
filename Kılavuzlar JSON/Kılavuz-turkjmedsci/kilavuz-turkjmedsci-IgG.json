@@ -1,0 +1,98 @@
+[
+    {
+        "Age group": "0-30 days",
+        "Number": 30,
+        "Geometric mean ± SD": "913.85 ± 262.19",
+        "Mean ± SD": "953 ± 262.19",
+        "Min–max": "399–1480",
+        "95% confidence interval": "855.1–1050.9"
+    },
+    {
+        "Age group": "1–3 months",
+        "Number": 30,
+        "Geometric mean ± SD": "409.86 ± 145.59",
+        "Mean ± SD": "429.5 ± 145.59",
+        "Min–max": "217–981",
+        "95% confidence interval": "375.14–483.86"
+    },
+    {
+        "Age group": "4–6 months",
+        "Number": 30,
+        "Geometric mean ± SD": "440.17 ± 236.8",
+        "Mean ± SD": "482.43 ± 236.8",
+        "Min–max": "270–1110",
+        "95% confidence interval": "394.01–570.86"
+    },
+    {
+        "Age group": "7–12 months",
+        "Number": 30,
+        "Geometric mean ± SD": "536.79 ± 186.62",
+        "Mean ± SD": "568.97 ± 186.62",
+        "Min–max": "242–977",
+        "95% confidence interval": "499.28–638.65"
+    },
+    {
+        "Age group": "13–24 months",
+        "Number": 30,
+        "Geometric mean ± SD": "726.79 ± 238.61",
+        "Mean ± SD": "761.7 ± 238.61",
+        "Min–max": "389–1260",
+        "95% confidence interval": "672.6–850.8"
+    },
+    {
+        "Age group": "25–36 months",
+        "Number": 30,
+        "Geometric mean ± SD": "786.41 ± 249.14",
+        "Mean ± SD": "811.5 ± 249.14",
+        "Min–max": "486–1970",
+        "95% confidence interval": "718.47–904.53"
+    },
+    {
+        "Age group": "3–5 years",
+        "Number": 30,
+        "Geometric mean ± SD": "823.19 ± 164.19",
+        "Mean ± SD": "839.87 ± 164.19",
+        "Min–max": "457–1120",
+        "95% confidence interval": "778.56–901.18"
+    },
+    {
+        "Age group": "6–8 years",
+        "Number": 30,
+        "Geometric mean ± SD": "982.86 ± 255.53",
+        "Mean ± SD": "1014.93 ± 255.53",
+        "Min–max": "483–1580",
+        "95% confidence interval": "919.52–1110.35"
+    },
+    {
+        "Age group": "9–11 years",
+        "Number": 30,
+        "Geometric mean ± SD": "1016.12 ± 322.27",
+        "Mean ± SD": "1055.43 ± 322.27",
+        "Min–max": "642–2290",
+        "95% confidence interval": "935.09–1175.77"
+    },
+    {
+        "Age group": "12–16 years",
+        "Number": 30,
+        "Geometric mean ± SD": "1123.56 ± 203.83",
+        "Mean ± SD": "1142.07 ± 203.83",
+        "Min–max": "636–1610",
+        "95% confidence interval": "1065.96–1218.18"
+    },
+    {
+        "Age group": "16–18 years",
+        "Number": 30,
+        "Geometric mean ± SD": "1277.20 ± 361.89",
+        "Mean ± SD": "1322.77 ± 361.89",
+        "Min–max": "688–2430",
+        "95% confidence interval": "1187.63–1457.9"
+    },
+    {
+        "Age group": "Total",
+        "Number": 330,
+        "Geometric mean ± SD": "773.94 ± 361.76",
+        "Mean ± SD": "852.92 ± 361.76",
+        "Min–max": "217–2430",
+        "95% confidence interval": "813.75–892.1"
+    }
+]

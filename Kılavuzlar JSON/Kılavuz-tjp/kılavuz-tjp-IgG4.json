@@ -1,0 +1,100 @@
+[
+    {
+        "Age groups": "0-30 days",
+        "Number of subjects": 15,
+        "Geometric mean ± SD": "24±17",
+        "Min-max": "17-81",
+        "95% confidence intervals": "[17, 36]"
+    },
+    {
+        "Age groups": "1-5 months",
+        "Number of subjects": 10,
+        "Geometric mean ± SD": "15±14",
+        "Min-max": "2-48",
+        "95% confidence intervals": "[10, 31]"
+    },
+    {
+        "Age groups": "6-8 months",
+        "Number of subjects": 15,
+        "Geometric mean ± SD": "14±11",
+        "Min-max": "2-52",
+        "95% confidence intervals": "[12, 25]"
+    },
+    {
+        "Age groups": "9-12 months",
+        "Number of subjects": 27,
+        "Geometric mean ± SD": "12±5",
+        "Min-max": "2-20",
+        "95% confidence intervals": "[12, 16]"
+    },
+    {
+        "Age groups": "13-24 months",
+        "Number of subjects": 69,
+        "Geometric mean ± SD": "16±17",
+        "Min-max": "2-99",
+        "95% confidence intervals": "[18, 26]"
+    },
+    {
+        "Age groups": "25-36 months",
+        "Number of subjects": 61,
+        "Geometric mean ± SD": "20±40",
+        "Min-max": "2-171",
+        "95% confidence intervals": "[23, 43]"
+    },
+    {
+        "Age groups": "37-48 months",
+        "Number of subjects": 50,
+        "Geometric mean ± SD": "27±37",
+        "Min-max": "4-185",
+        "95% confidence intervals": "[27, 48]"
+    },
+    {
+        "Age groups": "49-72 months",
+        "Number of subjects": 56,
+        "Geometric mean ± SD": "35±46",
+        "Min-max": "8-227",
+        "95% confidence intervals": "[37, 62]"
+    },
+    {
+        "Age groups": "7-8 years",
+        "Number of subjects": 64,
+        "Geometric mean ± SD": "42±46",
+        "Min-max": "2-198",
+        "95% confidence intervals": "[49, 72]"
+    },
+    {
+        "Age groups": "9-10 years",
+        "Number of subjects": 69,
+        "Geometric mean ± SD": "36±45",
+        "Min-max": "5-202",
+        "95% confidence intervals": "[41, 63]"
+    },
+    {
+        "Age groups": "11-12 years",
+        "Number of subjects": 35,
+        "Geometric mean ± SD": "34±44",
+        "Min-max": "4-160",
+        "95% confidence intervals": "[34, 64]"
+    },
+    {
+        "Age groups": "13-14 years",
+        "Number of subjects": 31,
+        "Geometric mean ± SD": "51±45",
+        "Min-max": "10-144",
+        "95% confidence intervals": "[51, 84]"
+    },
+    {
+        "Age groups": "15-16 years",
+        "Number of subjects": 20,
+        "Geometric mean ± SD": "36±44",
+        "Min-max": "9-187",
+        "95% confidence intervals": "[30, 72]"
+    },
+    {
+        "Age groups": "Older than 16 years",
+        "Number of subjects": 23,
+        "Geometric mean ± SD": "33±47",
+        "Min-max": "15-202",
+        "95% confidence intervals": "[25, 66]"
+    }
+]

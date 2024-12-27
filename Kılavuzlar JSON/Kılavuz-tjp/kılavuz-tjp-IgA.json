@@ -1,0 +1,122 @@
+# Reformatting the original data into the requested structure
+converted_data = [
+    {
+        "age_group": "0-30 days",
+        "number_of_subjects": 16,
+        "geometric_mean": 5.7,
+        "sd": 0.2,
+        "min_max": {"min": 5.0, "max": 5.8},
+        "confidence_interval": [5.6, 5.9],
+    },
+    {
+        "age_group": "1-5 months",
+        "number_of_subjects": 12,
+        "geometric_mean": 20.2,
+        "sd": 19.7,
+        "min_max": {"min": 5.8, "max": 58.0},
+        "confidence_interval": [15.8, 40.9],
+    },
+    {
+        "age_group": "6-8 months",
+        "number_of_subjects": 15,
+        "geometric_mean": 23.2,
+        "sd": 25.2,
+        "min_max": {"min": 5.8, "max": 85.8},
+        "confidence_interval": [20.5, 48.5],
+    },
+    {
+        "age_group": "9-12 months",
+        "number_of_subjects": 26,
+        "geometric_mean": 52.9,
+        "sd": 36.7,
+        "min_max": {"min": 18.4, "max": 154.0},
+        "confidence_interval": [47.2, 76.9],
+    },
+    {
+        "age_group": "13-24 months",
+        "number_of_subjects": 57,
+        "geometric_mean": 44.1,
+        "sd": 18.3,
+        "min_max": {"min": 11.5, "max": 94.3},
+        "confidence_interval": [42.9, 52.6],
+    },
+    {
+        "age_group": "25-36 months",
+        "number_of_subjects": 52,
+        "geometric_mean": 53.5,
+        "sd": 26.8,
+        "min_max": {"min": 23.0, "max": 130.0},
+        "confidence_interval": [51.4, 66.3],
+    },
+    {
+        "age_group": "37-48 months",
+        "number_of_subjects": 39,
+        "geometric_mean": 68.8,
+        "sd": 22.2,
+        "min_max": {"min": 40.7, "max": 115.0},
+        "confidence_interval": [64.8, 79.2],
+    },
+    {
+        "age_group": "49-72 months",
+        "number_of_subjects": 68,
+        "geometric_mean": 91.9,
+        "sd": 37.4,
+        "min_max": {"min": 23.0, "max": 205.1},
+        "confidence_interval": [90.2, 108.3],
+    },
+    {
+        "age_group": "7-8 years",
+        "number_of_subjects": 64,
+        "geometric_mean": 108.4,
+        "sd": 42.3,
+        "min_max": {"min": 36.1, "max": 268.0},
+        "confidence_interval": [105.9, 127.0],
+    },
+    {
+        "age_group": "9-10 years",
+        "number_of_subjects": 53,
+        "geometric_mean": 116.7,
+        "sd": 45.9,
+        "min_max": {"min": 54.0, "max": 268.0},
+        "confidence_interval": [111.8, 137.0],
+    },
+    {
+        "age_group": "11-12 years",
+        "number_of_subjects": 31,
+        "geometric_mean": 115.8,
+        "sd": 43.0,
+        "min_max": {"min": 27.0, "max": 198.0},
+        "confidence_interval": [109.7, 141.3],
+    },
+    {
+        "age_group": "13-14 years",
+        "number_of_subjects": 23,
+        "geometric_mean": 130.5,
+        "sd": 47.4,
+        "min_max": {"min": 52.4, "max": 225.0},
+        "confidence_interval": [118.0, 159.0],
+    },
+    {
+        "age_group": "15-16 years",
+        "number_of_subjects": 15,
+        "geometric_mean": 109.8,
+        "sd": 29.4,
+        "min_max": {"min": 48.0, "max": 158.0},
+        "confidence_interval": [97.8, 130.3],
+    },
+    {
+        "age_group": "Older than 16 years",
+        "number_of_subjects": 15,
+        "geometric_mean": 121.3,
+        "sd": 55.5,
+        "min_max": {"min": 46.5, "max": 221.0},
+        "confidence_interval": [102.4, 163.8],
+    },
+]
+
+# Save the reformatted JSON to a file
+formatted_json_path = "/mnt/data/formatted_age_group_data.json"
+with open(formatted_json_path, "w") as formatted_json_file:
+    json.dump(converted_data, formatted_json_file, indent=4)
+
+formatted_json_path

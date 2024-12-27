@@ -1,0 +1,92 @@
+{
+  "IgG": [
+    {
+      "ageRange": "4-5 yaş",
+      "values": {
+        "min": 839.87,
+        "max": 994.4
+      }
+    },
+    {
+      "ageRange": "6-8 yaş",
+      "values": {
+        "min": 923,
+        "max": 1162.75
+      }
+    },
+    {
+      "ageRange": "12-16 yaş",
+      "values": {
+        "min": 946,
+        "max": 946
+      }
+    }
+  ],
+  "IgA": [
+    {
+      "ageRange": "4-5 yaş",
+      "values": {
+        "min": 68.98,
+        "max": 94.35
+      }
+    },
+    {
+      "ageRange": "25-36 ay",
+      "values": {
+        "min": 54.2,
+        "max": 59.77
+      }
+    },
+    {
+      "ageRange": "13-24 ay",
+      "values": {
+        "min": 37.35,
+        "max": 50
+      }
+    }
+  ],
+  "IgM": [
+    {
+      "ageRange": "4-6 ay",
+      "values": {
+        "min": 50.15,
+        "max": 75.44
+      }
+    },
+    {
+      "ageRange": "13-24 ay",
+      "values": {
+        "min": 58,
+        "max": 85.4
+      }
+    },
+    {
+      "ageRange": "4-5 yaş",
+      "values": {
+        "min": 56,
+        "max": 121.1
+      }
+    },
+    {
+      "ageRange": "6-8 yaş",
+      "values": {
+        "min": 65,
+        "max": 118.15
+      }
+    },
+    {
+      "ageRange": "12-16 yaş",
+      "values": {
+        "min": 59,
+        "max": 143.6
+      }
+    },
+    {
+      "ageRange": "17-18 yaş",
+      "values": {
+        "min": 99,
+        "max": 128.5
+      }
+    }
+  ]
+}

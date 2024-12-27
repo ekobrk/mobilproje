@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "age_group": "25–36 months",
+      "number": 30,
+      "geometric_mean_sd": "48.78 ± 16.90",
+      "mean_sd": "51.73 ± 16.90",
+      "min_max": "19.8–75",
+      "confidence_interval_95": "45.41–58.04"
+    },
+    {
+      "age_group": "3–5 years",
+      "number": 30,
+      "geometric_mean_sd": "44.05 ± 21.55",
+      "mean_sd": "45.26 ± 21.55",
+      "min_max": "20.8–93.2",
+      "confidence_interval_95": "37.21–53.30"
+    },
+    {
+      "age_group": "6–8 years",
+      "number": 30,
+      "geometric_mean_sd": "56.82 ± 30.55",
+      "mean_sd": "65.53 ± 30.55",
+      "min_max": "18.9–135",
+      "confidence_interval_95": "53.01–78.06"
+    },
+    {
+      "age_group": "9–11 years",
+      "number": 30,
+      "geometric_mean_sd": "77.59 ± 37.37",
+      "mean_sd": "84.19 ± 37.37",
+      "min_max": "34.1–200",
+      "confidence_interval_95": "70.24–98.15"
+    },
+    {
+      "age_group": "12–16 years",
+      "number": 30,
+      "geometric_mean_sd": "75.30 ± 31.86",
+      "mean_sd": "81.39 ± 31.86",
+      "min_max": "35.2–150",
+      "confidence_interval_95": "69.49–93.28"
+    },
+    {
+      "age_group": "16–18 years",
+      "number": 30,
+      "geometric_mean_sd": "86.33 ± 43.29",
+      "mean_sd": "95.12 ± 43.29",
+      "min_max": "29.3–200",
+      "confidence_interval_95": "78.95–111.28"
+    },
+    {
+      "age_group": "Total",
+      "number": 180,
+      "geometric_mean_sd": "62.72 ± 37.13",
+      "mean_sd": "70.53 ± 30.13",
+      "min_max": "18.9–200",
+      "confidence_interval_95": "65.19–75.837"
+    }
+  ]
+}
