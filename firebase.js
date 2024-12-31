@@ -1,25 +1,29 @@
-// Firebase'i başlatmak için Firebase Config'i kullanıyoruz
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+// firebase.js
+import { initializeAuth, getReactNativePersistence } from "firebase/auth";
+import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+import { getFirestore } from "firebase/firestore";
+import firebase from 'firebase/compat';
 
-// FireStore
-import 'firebase/compat/firestore';
-
-// Kendi firebaseConfig değerlerinizi kopyala/yapıştır yapın. Yoksa uygulama çalışmaz.
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzsLviaSyD5t01N_7SkA6G9VF17hGw4uLaqZ2w",
-  authDomain: "todox-4bbf6.firebaseapp.com",
-  projectId: "todox-4bbf6",
-  storageBucket: "todox-4bbf6.firebasestorage.app",
-  messagingSenderId: "508849849940",
-  appId: "1:508849849940:web:a6390d1c15364eb0a363b3"
+  apiKey: "AIzaSyAJpx_bn7o7l1PY2fQTFpPtjaTaqYQfYd8",
+  authDomain: "mobileproje-a21ec.firebaseapp.com",
+  projectId: "mobileproje-a21ec",
+  storageBucket: "mobileproje-a21ec.appspot.com", // Doğru storageBucket
+  messagingSenderId: "553863920300",
+  appId: "1:553863920300:web:2fb99901a51f223c013d09",
+  measurementId: "G-HNYQBEN4ND"
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const initialAuth = initializeAuth(app, {
+  persistence: getReactNativePersistence(ReactNativeAsyncStorage),
+});
+const db = getFirestore(app);
 
-export const auth = firebase.auth();
+const auth = firebase.auth()
 
-// Firebase Storeage için
-export const firestore = firebase.firestore();
+// Dışa Aktarım
+export { auth, db };
+export default app;
