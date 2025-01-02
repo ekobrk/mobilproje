@@ -11,9 +11,8 @@ import {
   Platform,
   Modal,
   KeyboardAvoidingView,
-  TouchableWithoutFeedback,
-  Keyboard,
   FlatList,
+  Keyboard,
 } from 'react-native';
 import { db } from '../firebase'; // Kendi firebase ayarlarını içe aktar
 import { collection, getDocs } from 'firebase/firestore';
@@ -63,8 +62,8 @@ const ReferenceRange = () => {
           .getDate()
           .toString()
           .padStart(2, '0')}.${(selectedDate.getMonth() + 1)
-          .toString()
-          .padStart(2, '0')}.${selectedDate.getFullYear()}`;
+            .toString()
+            .padStart(2, '0')}.${selectedDate.getFullYear()}`;
         setBirthDateString(formattedDate);
         setShowDatePicker(false);
       }
@@ -78,8 +77,8 @@ const ReferenceRange = () => {
       .getDate()
       .toString()
       .padStart(2, '0')}.${(tempDate.getMonth() + 1)
-      .toString()
-      .padStart(2, '0')}.${tempDate.getFullYear()}`;
+        .toString()
+        .padStart(2, '0')}.${tempDate.getFullYear()}`;
     setBirthDateString(formattedDate);
     setShowDatePicker(false);
   };
@@ -226,138 +225,130 @@ const ReferenceRange = () => {
     <Text style={styles.noResultsText}>Henüz sonuç yok.</Text>
   );
 
-  // List Header Component (Form ve "Sonuçlar" Başlığı)
-  const renderHeader = () => (
-    <>
-      {/* Doğum Tarihi */}
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>Doğum Tarihi</Text>
-        <TouchableOpacity
-          onPress={() => setShowDatePicker(true)}
-          style={styles.datePickerButton}
-        >
-          <Text style={styles.datePickerButtonText}>
-            {birthDateString || 'Doğum Tarihini Seç'}
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* DatePicker Modal */}
-      {showDatePicker && (
-        <View>
-          <DateTimePicker
-            value={tempDate}
-            mode="date"
-            display={Platform.OS === 'ios' ? 'spinner' : 'default'}
-            onChange={handleDateChange}
-            maximumDate={new Date()}
-            locale="tr-TR"
-          />
-          {Platform.OS === 'ios' && (
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity onPress={cancelDate} style={styles.cancelButton}>
-                <Text style={styles.buttonText}>İptal</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={confirmDate}
-                style={styles.confirmButton}
-              >
-                <Text style={styles.buttonText}>Onayla</Text>
-              </TouchableOpacity>
-            </View>
-          )}
-        </View>
-      )}
-
-      {/* Test Sonucu */}
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>Test Sonucu</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Test Sonucu"
-          placeholderTextColor="#7a9eaf"
-          keyboardType="numeric"
-          value={testValue}
-          onChangeText={setTestValue}
-        />
-      </View>
-
-      {/* İmmunoglobulin Türü */}
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>İmmunoglobulin Türü</Text>
-        <TouchableOpacity
-          style={styles.pickerButton}
-          onPress={() => {
-            setSelectedAntibodyType(antibodyType);
-            setPickerVisible(true);
-          }}
-        >
-          <Text style={styles.pickerButtonText}>
-            {antibodyType || 'Seçiniz'}
-          </Text>
-        </TouchableOpacity>
-
-        <Modal
-          transparent
-          visible={pickerVisible}
-          onRequestClose={() => setPickerVisible(false)}
-        >
-          <View style={styles.modalOverlay}>
-            <View style={styles.modalContainer}>
-              <Text style={styles.modalTitle}>İmmunoglobulin Türü Seçin</Text>
-              <Picker
-                selectedValue={selectedAntibodyType}
-                onValueChange={(itemValue) => setSelectedAntibodyType(itemValue)}
-              >
-                <Picker.Item label="Seçiniz" value="" />
-                {antibodyTypes.map((type) => (
-                  <Picker.Item key={type} label={type} value={type} />
-                ))}
-              </Picker>
-              <TouchableOpacity
-                style={styles.closeButton}
-                onPress={() => {
-                  setAntibodyType(selectedAntibodyType);
-                  setPickerVisible(false);
-                }}
-              >
-                <Text style={styles.closeButtonText}>Tamam</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </Modal>
-      </View>
-
-      {/* Sonuç Gör Butonu */}
-      <TouchableOpacity style={styles.submitButton} onPress={handleSubmit}>
-        <Text style={styles.submitButtonText}>Sonuç Gör</Text>
-      </TouchableOpacity>
-
-      {/* "Sonuçlar" Başlığı */}
-      <Text style={styles.resultTitle}>Sonuçlar</Text>
-    </>
-  );
-
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Test Sonucu Değerlendirme</Text>
-      </View>
       <KeyboardAvoidingView
         style={styles.formContainer}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <FlatList
-            data={results}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={renderResultCard}
-            ListHeaderComponent={renderHeader}
-            ListEmptyComponent={renderEmpty}
-            contentContainerStyle={styles.flatListContainer}
-            keyboardShouldPersistTaps="handled"
-          />
-        </TouchableWithoutFeedback>
+        <>
+          {/* Doğum Tarihi */}
+          <View style={styles.inputGroup}>
+            <Text style={styles.label}>Doğum Tarihi</Text>
+            <TouchableOpacity
+              onPress={() => setShowDatePicker(true)}
+              style={styles.datePickerButton}
+            >
+              <Text style={styles.datePickerButtonText}>
+                {birthDateString || 'Doğum Tarihini Seç'}
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* DatePicker */}
+          {showDatePicker && (
+            <View>
+              <DateTimePicker
+                value={tempDate}
+                mode="date"
+                display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+                onChange={handleDateChange}
+                maximumDate={new Date()}
+                locale="tr-TR"
+              />
+              {Platform.OS === 'ios' && (
+                <View style={styles.buttonContainer}>
+                  <TouchableOpacity onPress={cancelDate} style={styles.cancelButton}>
+                    <Text style={styles.buttonText}>İptal</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={confirmDate}
+                    style={styles.confirmButton}
+                  >
+                    <Text style={styles.buttonText}>Onayla</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+            </View>
+          )}
+
+          {/* Test Sonucu */}
+          <View style={styles.inputGroup}>
+            <Text style={styles.label}>Test Sonucu</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Test Sonucu"
+              placeholderTextColor="#7a9eaf"
+              keyboardType="numeric"
+              value={testValue}
+              onChangeText={setTestValue}
+            />
+          </View>
+
+          {/* İmmunoglobulin Türü */}
+          <View style={styles.inputGroup}>
+            <Text style={styles.label}>İmmunoglobulin Türü</Text>
+            <TouchableOpacity
+              style={styles.pickerButton}
+              onPress={() => {
+                setSelectedAntibodyType(antibodyType);
+                setPickerVisible(true);
+              }}
+            >
+              <Text style={styles.pickerButtonText}>
+                {antibodyType || 'Seçiniz'}
+              </Text>
+            </TouchableOpacity>
+
+            <Modal
+              transparent
+              visible={pickerVisible}
+              onRequestClose={() => setPickerVisible(false)}
+            >
+              <View style={styles.modalOverlay}>
+                <View style={styles.modalContainer}>
+                  <Text style={styles.modalTitle}>İmmunoglobulin Türü Seçin</Text>
+                  <Picker
+                    selectedValue={selectedAntibodyType}
+                    onValueChange={(itemValue) => setSelectedAntibodyType(itemValue)}
+                  >
+                    <Picker.Item color='black' label="Seçiniz" value="" />
+                    {antibodyTypes.map((type) => (
+                      <Picker.Item color='black' key={type} label={type} value={type} />
+                    ))}
+                  </Picker>
+                  <TouchableOpacity
+                    style={styles.closeButton}
+                    onPress={() => {
+                      setAntibodyType(selectedAntibodyType);
+                      setPickerVisible(false);
+                    }}
+                  >
+                    <Text style={styles.closeButtonText}>Tamam</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </Modal>
+          </View>
+
+          {/* Sonuç Gör Butonu */}
+          <TouchableOpacity style={styles.submitButton} onPress={handleSubmit}>
+            <Text style={styles.submitButtonText}>Sonuç Gör</Text>
+          </TouchableOpacity>
+
+          {/* "Sonuçlar" Başlığı */}
+          <Text style={styles.resultTitle}>Sonuçlar</Text>
+        </>
+        <FlatList
+          data={results}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={renderResultCard}
+          ListEmptyComponent={renderEmpty}
+          contentContainerStyle={styles.flatListContainer}
+          // Önemli değişiklikler:
+          keyboardShouldPersistTaps="always"
+          keyboardDismissMode="on-drag"
+        />
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -369,20 +360,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
-  },
-  header: {
-    backgroundColor: '#4caf50',
-    paddingVertical: 20,
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#388e3c',
-  },
-  headerText: {
-    color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
-    letterSpacing: 1.2,
-    textAlign: 'center',
   },
   formContainer: {
     flex: 1,
@@ -472,7 +449,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   closeButtonText: {
-    color: '#ffffff',
+    color: '#000000',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -489,6 +466,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 5,
     alignItems: 'center',
+    marginBottom: 10,
   },
   cancelButton: {
     backgroundColor: '#f44336',
@@ -498,6 +476,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 5,
     alignItems: 'center',
+    marginBottom: 10,
   },
   buttonText: {
     color: '#ffffff',

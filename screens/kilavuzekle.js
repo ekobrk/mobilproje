@@ -102,11 +102,7 @@ const Guide = () => {
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-      {/* Üst Başlık */}
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Kılavuz Ekleme</Text>
-      </View>
-
+      
       {/* Form Alanı */}
       <KeyboardAvoidingView
         style={styles.formContainer}
@@ -190,21 +186,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
   },
-  header: {
-    backgroundColor: '#4caf50',
-    paddingVertical: 20,
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#388e3c',
-  },
-  headerText: {
-    color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
-    letterSpacing: 1.2,
-    textAlign: 'center',
-  },
-  formContainer: {
+   formContainer: {
     flex: 1,
     backgroundColor: '#e8f5fc',
     margin: 20,
